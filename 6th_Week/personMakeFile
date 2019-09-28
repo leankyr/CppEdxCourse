@@ -1,0 +1,14 @@
+W_FLAGS = -Wall -Wextra -g 
+output: main.o Person.o
+		g++ -std=c++11 $(W_FLAGS) main.o Person.o -lm -o output
+
+# need -c flag
+Person.o: Person.h Person.cpp
+		g++ -std=c++11 $(W_FLAGS) -c Person.cpp
+
+# needs -c flag
+main.o: Person.cpp
+		g++ -std=c++11 $(W_FLAGS) -c main.cpp
+
+#clean:
+#		rm *.o 
