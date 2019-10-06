@@ -7,10 +7,11 @@
     {
     
     private:
-        int age;
-   
+
     protected:
         std::string phoneNumber;
+        int age;
+
     public:
         std::string firstName;
         std::string lastName;
@@ -22,10 +23,10 @@
         Person(std::string fName, std::string lName, std::string r, int age, std::string pn);
 				
 				// Destructors       
-        ~Person();
+        virtual ~Person();
             
         // Virtual method - Can be overriden in derived classes
-        virtual void OutputAge(int age);
+        virtual void OutputAge();
         // Pure Virtual method - it HAS to be implemented
         // in derived classes
         virtual void OutputIdentity() = 0;

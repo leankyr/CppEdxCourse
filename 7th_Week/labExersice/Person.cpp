@@ -29,9 +29,9 @@ Person::~Person()
 
 }
 
-void OutputAge(int age)
+void Person::OutputAge()
 {
-  std::cout << "I am " << age << " years old" << std::endl;
+  std::cout << "I am " << this -> age << " years old" << std::endl;
 }
 
 

@@ -1,8 +1,8 @@
 W_FLAGS = -Wall -Wextra -g 
 
 # firstly
-output: main.o Person.o Student.o #Teacher.o
-		g++ -std=c++11 $(W_FLAGS) main.o Person.o Student.o -lm -o output
+output: main.o Person.o Student.o Teacher.o
+		g++ -std=c++11 $(W_FLAGS) main.o Person.o Student.o Teacher.o -lm -o output
 
 # needs -c flag
 main.o: main.cpp
@@ -12,13 +12,13 @@ main.o: main.cpp
 Person.o: Person.h Person.cpp
 		g++ -std=c++11 $(W_FLAGS) -c Person.cpp
 
-# need -c flag
+## need -c flag
 Student.o: Student.h Student.cpp
 		g++ -std=c++11 $(W_FLAGS) -c Student.cpp
 
 ## need -c flag
-#Teacher.o: Teacher.h Teacher.cpp
-#		g++ -std=c++11 $(W_FLAGS) -c Teacher.cpp
+Teacher.o: Teacher.h Teacher.cpp
+		g++ -std=c++11 $(W_FLAGS) -c Teacher.cpp
 
 #clean:
 #		rm *.o 
