@@ -6,7 +6,7 @@
 // Calls the base constructor
 
 // Does not compile needs sth
-Student::Student():Person(firstName, lastName, race, age, phoneNumber)
+Student::Student(std::string firstName, std::string lastName, std::string race, int age, std::string phoneNumber):Person(firstName, lastName, race, age, phoneNumber)
 {
 
 }
@@ -18,10 +18,10 @@ Student::~Student()
 
 // overrride the virtual function 
 
-void Student::OutputAge(int inita)
+void Student::OutputAge()
 {  
   Student::OutputIdentity(); 
-  Person::OutputAge(inita);
+  Person::OutputAge();
 }
 
 void Student::OutputIdentity()
